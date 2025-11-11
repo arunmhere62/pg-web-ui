@@ -1,6 +1,6 @@
-import { Outlet, NavLink, useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
-import { LayoutDashboard, Ticket, Building2, LogOut, User } from 'lucide-react';
+import { Outlet, NavLink, useNavigate } from "react-router-dom";
+import { useAuthStore } from "../store/authStore";
+import { LayoutDashboard, Ticket, Building2, LogOut, User } from "lucide-react";
 
 export default function DashboardLayout() {
   const { user, logout } = useAuthStore();
@@ -8,13 +8,13 @@ export default function DashboardLayout() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate("/login");
   };
 
   const navItems = [
-    { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-    { to: '/tickets', icon: Ticket, label: 'Tickets' },
-    { to: '/organizations', icon: Building2, label: 'Organizations' },
+    { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
+    { to: "/tickets", icon: Ticket, label: "Tickets" },
+    { to: "/organizations", icon: Building2, label: "Organizations" },
   ];
 
   return (
@@ -37,8 +37,8 @@ export default function DashboardLayout() {
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-4 py-3 rounded-lg transition ${
                     isActive
-                      ? 'bg-blue-50 text-blue-600 font-semibold'
-                      : 'text-gray-700 hover:bg-gray-50'
+                      ? "bg-blue-50 text-blue-600 font-semibold"
+                      : "text-gray-700 hover:bg-gray-50"
                   }`
                 }
               >
@@ -55,7 +55,9 @@ export default function DashboardLayout() {
                 <User className="w-5 h-5 text-blue-600" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-gray-900 truncate">{user?.name}</p>
+                <p className="text-sm font-semibold text-gray-900 truncate">
+                  {user?.name}
+                </p>
                 <p className="text-xs text-gray-600">{user?.role_name}</p>
               </div>
             </div>

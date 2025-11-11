@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { useAuthStore } from './store/authStore';
-import LoginPage from './pages/LoginPage';
-import DashboardLayout from './components/DashboardLayout';
-import DashboardPage from './pages/DashboardPage';
-import TicketsPage from './pages/TicketsPage';
-import TicketDetailsPage from './pages/TicketDetailsPage';
-import OrganizationsPage from './pages/OrganizationsPage';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useAuthStore } from "./store/authStore";
+import LoginPage from "./pages/LoginPage";
+import DashboardLayout from "./components/DashboardLayout";
+import DashboardPage from "./pages/DashboardPage";
+import TicketsPage from "./pages/TicketsPage";
+import TicketDetailsPage from "./pages/TicketDetailsPage";
+import OrganizationsPage from "./pages/OrganizationsPage";
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
