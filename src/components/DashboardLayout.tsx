@@ -1,6 +1,6 @@
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../store/authStore";
-import { LayoutDashboard, Ticket, Building2, LogOut, User } from "lucide-react";
+import { LayoutDashboard, Ticket, Building2, LogOut, User, Shield, Key } from "lucide-react";
 
 export default function DashboardLayout() {
   const { user, logout } = useAuthStore();
@@ -15,6 +15,8 @@ export default function DashboardLayout() {
     { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { to: "/tickets", icon: Ticket, label: "Tickets" },
     { to: "/organizations", icon: Building2, label: "Organizations" },
+    { to: "/roles", icon: Shield, label: "Roles" },
+    { to: "/permissions", icon: Key, label: "Permissions" },
   ];
 
   return (

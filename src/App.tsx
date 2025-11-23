@@ -6,6 +6,8 @@ import DashboardPage from "./pages/DashboardPage";
 import TicketsPage from "./pages/TicketsPage";
 import TicketDetailsPage from "./pages/TicketDetailsPage";
 import OrganizationsPage from "./pages/OrganizationsPage";
+import RolesPage from "./pages/RolesPage";
+import PermissionsPage from "./pages/PermissionsPage";
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
@@ -30,6 +32,8 @@ function App() {
           <Route path="tickets" element={<TicketsPage />} />
           <Route path="tickets/:id" element={<TicketDetailsPage />} />
           <Route path="organizations" element={<OrganizationsPage />} />
+          <Route path="roles" element={<RolesPage />} />
+          <Route path="permissions" element={<PermissionsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
